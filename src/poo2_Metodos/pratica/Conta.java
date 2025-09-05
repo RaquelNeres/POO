@@ -1,4 +1,4 @@
-package poo2.pratica;
+package poo2_Metodos.pratica;
 
 public class Conta {
     String numero;

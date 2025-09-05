@@ -1,4 +1,4 @@
-package poo1.pratica;
+package poo1_Class_Objects.pratica;
 
 public class Pessoa {
     String nome;

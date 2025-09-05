@@ -1,9 +1,6 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-package poo1.pratica; // ou o package correto do Main
-
-import poo1.pratica.Pessoa;
-import poo1.pratica.Conta;
+package poo1_Class_Objects.pratica; // ou o package correto do Main
 
 public class Main {
     public static void main(String[] args) {
