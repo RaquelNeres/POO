@@ -11,7 +11,7 @@ public class Data {
         this.ano = ano;
     }
 
-    @Override
+    @Override  // Indica que estamos sobrescrevendo o método da classe pai
     public String toString() {
         return dia + "/" + mes + "/" + ano;
     }

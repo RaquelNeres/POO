@@ -11,5 +11,7 @@ public class Main {
         c1.sacar(150);
         c1.sacar(100);
         c1.depositar(100);
+
+        System.out.println(p1.dtNasc);
     }
 }

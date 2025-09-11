@@ -4,7 +4,7 @@ public class ContaCorrente extends Conta {
     double limite;
 
     ContaCorrente(String numero, Pessoa titular, Data c) {
-        super(numero, titular, c);
+        super(numero, titular, c);  // Chama o construtor de Conta, o mesmo da class Conta aqui
         this.limite = 200;
     }
 

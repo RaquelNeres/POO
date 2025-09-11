@@ -11,7 +11,7 @@ public class Pessoa {
         this.sexo = sexo;
         this.cpf = cpf;
         // Apenas exemplo, gerando a data de nascimento fictícia
-        this.dtNasc = new Data(1, 1, 2000 + (2025 - idade));
+        this.dtNasc = new Data(1, 1, (2025 - idade));
     }
 }
 
