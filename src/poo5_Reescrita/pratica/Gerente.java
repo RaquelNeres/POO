@@ -1,14 +1,12 @@
 package poo5_Reescrita.pratica;
 
 public class Gerente extends Pessoa {
-    private String matricula;
-    private String senha;
+    public String matricula;
+    public String senha = "123456";
 
-    public Gerente(String nome, Data nasc, char sexo, String cpf, String matricula, String senha) {
+    public Gerente(String nome, Data nasc, char sexo, String cpf, String matricula) {
         super(nome, nasc, sexo, cpf);
         this.matricula = matricula;
-        this.senha = senha;
-        System.out.println("Gerente criado com sucesso: " + this.nome + " - Matrícula: " + this.matricula);
     }
 
     public boolean validarAcesso(String s) {

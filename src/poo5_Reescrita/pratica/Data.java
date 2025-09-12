@@ -1,15 +1,14 @@
 package poo5_Reescrita.pratica;
 
 public class Data {
-    private int dia;
-    private int mes;
-    private int ano;
+    public int dia;
+    public int mes;
+    public int ano;
 
     public Data(int dia, int mes, int ano) {
         this.dia = dia;
         this.mes = mes;
         this.ano = ano;
-        System.out.println("Data criada com sucesso: " + this.imprimir());
     }
 
     public String imprimir() {
@@ -28,17 +27,4 @@ public class Data {
         }
         return false;
     }
-//
-//    // Getters
-//    public int getDia() {
-//        return dia;
-//    }
-//
-//    public int getMes() {
-//        return mes;
-//    }
-//
-//    public int getAno() {
-//        return ano;
-//    }
 }

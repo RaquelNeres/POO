@@ -16,7 +16,7 @@ public class Main {
 
         Conta c1 = new Conta();
         c1.numero = "1234-5";
-        c1.titular = p1; // Conta pertencente ao Hilario
+        c1.titular = p1; // Conta pertencente ao Hilario    // consegue acessar os dados de outra class
         c1.saldo = 100.0;
         c1.limite = 200.0;
 

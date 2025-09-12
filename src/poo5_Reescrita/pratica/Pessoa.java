@@ -1,10 +1,10 @@
 package poo5_Reescrita.pratica;
 
 public class Pessoa {
-    protected String nome;
-    protected Data nasc;
-    protected char sexo;
-    protected String cpf;
+    public String nome;
+    public Data nasc;
+    public char sexo;
+    public String cpf;
 
     public Pessoa(String nome, Data nasc, char sexo, String cpf) {
         this.nome = nome;
@@ -15,32 +15,12 @@ public class Pessoa {
     }
 
     public int idade(Data hoje) {
-        int idade = hoje.getAno() - nasc.getAno();
+        int idade = hoje.ano - nasc.ano;
 
         // Verifica se ainda não fez aniversário este ano
-        if (hoje.getMes() < nasc.getMes() ||
-                (hoje.getMes() == nasc.getMes() && hoje.getDia() < nasc.getDia())) {
+        if (hoje.mes < nasc.mes || (hoje.mes == nasc.mes && hoje.dia < nasc.dia)) {
             idade--;
         }
-
-        System.out.println("Idade calculada com sucesso: " + idade + " anos");
         return idade;
     }
-
-//    // Getters
-//    public String getNome() {
-//        return nome;
-//    }
-//
-//    public Data getNasc() {
-//        return nasc;
-//    }
-//
-//    public char getSexo() {
-//        return sexo;
-//    }
-//
-//    public String getCpf() {
-//        return cpf;
-//    }
 }

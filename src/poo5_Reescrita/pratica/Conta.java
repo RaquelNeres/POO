@@ -1,9 +1,5 @@
 package poo5_Reescrita.pratica;
 
-import poo5_Reescrita.pratica.Pessoa;
-import poo5_Reescrita.pratica.Gerente;
-import poo5_Reescrita.pratica.Data;
-
 public abstract class Conta {
     protected String numero;
     protected Pessoa titular;
@@ -17,7 +13,6 @@ public abstract class Conta {
         this.ger = ger;
         this.criacao = criacao;
         this.saldo = 0.0;
-        System.out.println("Conta criada com sucesso: " + this.numero + " - Titular: " + this.titular.nome);
     }
 
     public void depositar(double valor) {
@@ -30,9 +25,31 @@ public abstract class Conta {
     }
 
     // Métodos abstratos que serão implementados pelas subclasses
-    public abstract double disponivel();
-    public abstract void extrato(double valor);
-    public abstract boolean sacar(double valor);
+    public double disponivel() {
+        System.out.println("Valor disponível na poupança: R$" + this.saldo);
+        return this.saldo;
+    }
+
+    public void extrato (){
+        System.out.println("=== EXTRATO POUPANÇA ===");
+        System.out.println("Número: " + this.numero);
+        System.out.println("Titular: " + this.titular);
+        System.out.println("Gerente: " + this.ger);
+        System.out.println("Data de criação: " + this.criacao.imprimir());
+        System.out.println("Saldo: R$" + this.saldo);
+        System.out.println("========================");
+    }
+
+    public boolean sacar(double valor) {
+        if (valor > 0 && valor <= this.saldo) {
+            this.saldo -= valor;
+            System.out.println("Saque realizado com sucesso. Valor: R$" + valor + " - Novo saldo: R$" + this.saldo);
+            return true;
+        } else {
+            System.out.println("Erro: Saque não realizado - valor inválido ou saldo insuficiente");
+            return false;
+        }
+    }
 
     public boolean transferir(double valor, Conta destino) {
         if (this.sacar(valor)) {
@@ -44,25 +61,4 @@ public abstract class Conta {
             return false;
         }
     }
-
-//    // Getters
-//    public String getNumero() {
-//        return numero;
-//    }
-//
-//    public Pessoa getTitular() {
-//        return titular;
-//    }
-//
-//    public Data getCriacao() {
-//        return criacao;
-//    }
-//
-//    public double getSaldo() {
-//        return saldo;
-//    }
-//
-//    public Gerente getGer() {
-//        return ger;
-//    }
 }
