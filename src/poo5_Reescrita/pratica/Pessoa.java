@@ -23,4 +23,10 @@ public class Pessoa {
         }
         return idade;
     }
+
+    @Override
+    public String toString() {  // sobrescrevedo o toString()
+        return nome;
+    }
+
 }

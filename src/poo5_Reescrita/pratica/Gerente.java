@@ -21,4 +21,10 @@ public class Gerente extends Pessoa {
         return acesso;
     }
 
+    @Override
+    public String toString() {  // sobrescrevedo o toString()
+        return nome;
+    }
+
+
 }
